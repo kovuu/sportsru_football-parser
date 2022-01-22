@@ -23,7 +23,6 @@ class Parser:
                 news_link = news.find('a', class_='short-text').get('href')
                 self.parse_news(news_link)
 
-
     def parse_news(self, url):
         news_response = requests.get(self.url + url)
         news_soup = BeautifulSoup(news_response.text, 'lxml')
