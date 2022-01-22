@@ -19,7 +19,6 @@ class News(Model):
 
 
 def save_news(news_info):
-    print(news_info)
     if not News.get_or_none(title=news_info['title']):
         News.create(date=news_info['date'], title=news_info['title'], text=news_info['text'])
 
